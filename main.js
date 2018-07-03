@@ -19,6 +19,7 @@ import ShopCar from './src/ShopCar';
 import Mine from './src/Mine';
 
 import Details from './src/Details';
+import Login from './src/Login';
 //侧滑菜单的页面
 import Wallet from "./src/drawer/Wallet";
 import CardCoupons from "./src/drawer/CardCoupons";
@@ -157,6 +158,7 @@ const Stack = StackNavigator({
     },
     Details: {
         screen: Details,
+
     },
 
     //DrawerNavigator跳转的页面也必须在这里注册
@@ -187,7 +189,9 @@ const RootStack = createStackNavigator({
     Details: {
         screen: Details,
     },
-
+    Login:{
+        screen: Login
+    },
     //DrawerNavigator跳转的页面也必须在这里注册
     Wallet: {
         screen: Wallet,
@@ -220,6 +224,8 @@ const RootStack = createStackNavigator({
 
     // }
 
+},{
+    initialRouteName:'Login'
 });
 /**
  * 配置侧滑菜单
@@ -286,6 +292,7 @@ const Drawer = createDrawerNavigator({
     //
     //     }
     // },
+    
 });
 
 export default class Main extends React.Component {
