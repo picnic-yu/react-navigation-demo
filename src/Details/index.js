@@ -5,7 +5,7 @@ import {
     StyleSheet,
     TouchableOpacity,
 } from 'react-native';
-
+import { Button } from 'antd-mobile-rn';
 export default class Details extends Component {
 
     static navigationOptions = ({navigation, screenProps}) => ({
@@ -40,8 +40,8 @@ export default class Details extends Component {
     render() {
         return (
             <View style={styles.container}>
-                {/* <Image source={{uri : 'https://reactnativecode.com/wp-content/uploads/2017/11/happy_mothersDay.gif'}} style = {{width: 315, height: 383}} /> */}
-                <Text style={{color: 'black'}}>我是首页跳转过来的页面</Text>
+                {/* <Text style={{color: 'black'}}>我是首页跳转过来的页面</Text> */}
+                <Button>antd</Button>
             </View>
         );
     }
