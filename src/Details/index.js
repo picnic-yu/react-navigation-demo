@@ -5,7 +5,7 @@ import {
     StyleSheet,
     TouchableOpacity,
 } from 'react-native';
-import { Button } from 'antd-mobile-rn';
+import { Button, Toast } from 'antd-mobile-rn';
 export default class Details extends Component {
 
     static navigationOptions = ({navigation, screenProps}) => ({
@@ -41,7 +41,9 @@ export default class Details extends Component {
         return (
             <View style={styles.container}>
                 {/* <Text style={{color: 'black'}}>我是首页跳转过来的页面</Text> */}
-                <Button>antd</Button>
+                <Button onClick={() => {
+                    Toast.info('This is a toast tips !!!');
+                }}>antd</Button>
             </View>
         );
     }
